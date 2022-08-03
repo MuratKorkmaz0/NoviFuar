@@ -1,0 +1,81 @@
+﻿@using EntityLayer.Concrete;
+@model IPagedList<Visitors>
+@using X.PagedList;
+@using X.PagedList.Mvc.Core;
+@using X.PagedList.Web.Common;
+
+@using (Html.BeginForm("Index", "Visitors", FormMethod.Get))
+{
+    <style>
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+    </style>
+
+    <div class="card" style="overflow-x:auto;">
+        <div class="card-header">Ziyaretciler</div>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th> Sirket</th>
+                    <th> Ad </th>
+                    <th> Soyad</th>
+                    <th> Iletisim(1)</th>
+                    <th> Iletisim(2)</th>
+                    <th> E-Posta</th>
+                    <th> Adres</th>
+                    <th> Web Site</th>
+                    <th> Ulke</th>
+                    <th> Sehir</th>
+                    <th> Giris Turu</th>
+                    <th> BarCode</th>
+                    <th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.CompanyName</td>
+                        <td>@item.Name</td>
+                        <td>@item.Surname</td>
+                        <td>@item.Number1</td>
+                        <td>@item.Number2</td>
+                        <td>@item.Email</td>
+                        <td>@item.Address</td>
+                        <td>@item.WebAddress</td>
+                        <td>@item.Contry</td>
+                        <td>@item.City</td>
+                        <td>@item.PriceTyp</td>
+                        <td>@item.BarCode</td>
+                        <td><a href="#" class="btn btn-danger">Sil</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <br />
+    <font></font>
+
+    <div class="pull-right">
+
+        @Html.PagedListPager((IPagedList)Model, visitors => Url.Action("Visitors",
+           new{ visitors }))
+
+         
+    </div>
+}

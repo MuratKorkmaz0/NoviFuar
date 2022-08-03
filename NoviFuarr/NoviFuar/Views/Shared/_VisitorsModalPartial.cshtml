@@ -1,0 +1,90 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using EntityLayer.Concrete;
+@model List<Visitors>
+
+@using (Html.BeginForm("VisitorProcedures", "Home", FormMethod.Get))
+{
+    <!--------------------- Modal ------------------------>
+    <div id="openModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+                <!--Body-->
+
+                <div class="modal-body">
+                    <p>Ziyaretci bilgileri</p>
+                    <style>
+                        table {
+                            border-collapse: collapse;
+                            border-spacing: 0;
+                            width: 100%;
+                            border: 1px solid #ddd;
+                        }
+
+                        th, td {
+                            text-align: left;
+                            padding: 8px;
+                        }
+
+                        tr:nth-child(even) {
+                            background-color: #f2f2f2
+                        }
+                    </style>
+                    <table class="table" style="overflow-x:auto;">
+                        <tbody>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.CompanyName</td>
+                                    <td>@item.Name</td>
+                                    <td>@item.Surname</td>
+                                    <td>@item.BarCode</td>
+                                    <td><a href="#" class="btn btn-danger">Sil</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" asp-area="" id="create" asp-controller="Home" asp-action="VisitorProcedures" class="btn btn-outline-primary">Yazdir</button>
+                    <button asp-area="" class="btn btn-outline-primary" data-dismiss="modal">Iptal</button>
+                </div>
+            </div>
+            <!--Body-->
+        </div>
+    </div>
+    <!--*********************************-----Modal----****************************************-->
+}
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script>if ($('#create').click(function () {
+
+        $.ajax({
+            type: "Get",
+            url: "/Home/Visitors",
+            data: '{CompanyName: "' + ComapanyName + '"Name: "' + Name + '"Surnname: "' + Surname + '"BarCode: "' + BarCode + '" }',
+            contentType: "application/json; charset=utf-8",
+            dataType: "html",
+            success: function (response) {
+                $("#partialModal").find(".modal-body").html(response);
+                $("#partialModal").modal('show');
+            },
+            failure: function (response) {
+                alert(response.responseText);
+            },
+            error: function (response) {
+                alert(response.responseText);
+            }
+        });
+        swal("İyi iş !", "İşlem Başarili!", "success");
+
+        return false;
+    })</script>
+

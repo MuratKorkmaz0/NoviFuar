@@ -1,0 +1,135 @@
+﻿@model EntityLayer.Concrete.Visitors;
+
+<!--Visitors Procedures Page-->
+@using (Html.BeginForm("VisitorProcedures", "Home", FormMethod.Post))
+{
+    <div class="table-scrollbar">
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="inputText">Firma Adi</label>
+                @Html.TextBoxFor(x => x.CompanyName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.CompanyName, "", new { @style = "color:red" })
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputEmail4">Ad</label>
+                @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Name, "", new { @style = "color:red" })
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputText">Soyad</label>
+                @Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Surname, "", new { @style = "color:red" })
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputNumber">(1) Telefon Numarasi</label>
+                @Html.TextBoxFor(x => x.Number1, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Number1, "", new { @style = "color:red" })
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputNumber">(2) Telefon Numarasi</label>
+                @Html.TextBoxFor(x => x.Number2, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Number2, "", new { @style = "color:red" })
+            </div>
+            <div class="form-group col-md-5">
+                <label for="inputText">Mail</label>
+                @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Email, "", new { @style = "color:red" })
+            </div>
+            <div class="form-group col-md-5">
+                <label for="inputText">Web Site Adresi </label>
+                @Html.TextBoxFor(x => x.WebAddress, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.WebAddress, "", new { @style = "color:red" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputAddress">Adres</label>
+            @Html.TextBoxFor(x => x.Address, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Address, "", new { @style = "color:red" })
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="inputCity">Sehir</label>
+                @Html.TextBoxFor(x => x.City, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.City, "", new { @style = "color:red" })
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputState">Ulke</label>
+                @Html.TextBoxFor(x => x.Contry, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Contry, "", new { @style = "color:red" })
+
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputState">Ucret Seciniz..</label>
+                @Html.TextBoxFor(x => x.PriceTyp, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.PriceTyp, "", new { @style = "color:red" })
+            </div>
+
+
+        </div>
+        <div class="form-group col-md-3">
+            <label>Aciklama</label>
+            @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Description, "", new { @style = "color:red" })
+        </div>
+
+        <div>
+            <button type="button" id="Create" class="btn btn-primary" data-toggle="modal" data-target="#openModal">Oluştur</button>
+        </div>
+    </div>
+        <!--------------------- Modal ------------------------>
+        <div id="openModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                    </div>
+                    <!--Body-->
+
+                    <div class="modal-body">
+                        <p>Ziyaretci bilgileri</p>
+                        <style>
+                            table {
+                                border-collapse: collapse;
+                                border-spacing: 0;
+                                width: 100%;
+                                border: 1px solid #ddd;
+                            }
+
+                            th, td {
+                                text-align: left;
+                                padding: 8px;
+                            }
+
+                            tr:nth-child(even) {
+                                background-color: #f2f2f2
+                            }
+                        </style>
+                        <table class="table" style="overflow-x:auto;">
+                            <tbody>
+                                <tr>
+                                    <td valign="top"><b>@Html.DisplayNameFor(item => Model)</b></td>
+                                    <td>
+                                        @Html.DisplayFor(item => Model.CompanyName)
+                                        @Html.DisplayFor(item => Model.Name)
+                                        <br />
+                                        @Html.DisplayFor(item => Model.Surname)
+                                        @Html.DisplayFor(item => Model.BarCode)
+                                        <br />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" asp-area="" id="create" asp-controller="Home" asp-action="VisitorProcedures" class="btn btn-outline-primary">Yazdir</button>
+                        <button asp-area="" class="btn btn-outline-primary" data-dismiss="modal">Iptal</button>
+                    </div>
+                </div>
+                    <!--Body-->
+                </div>
+            </div>
+        <!--*********************************-----Modal----****************************************-->
+}
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+

@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccesLayer\DataAccesLayer.csproj" />
+    <ProjectReference Include="..\EntityLayer\EntityLayer.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Abstrack\" />
+    <None Remove="Concrete\" />
+    <None Remove="ValidationRules\" />
+    <None Remove="FluentValidation.AspNetCore" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Abstrack\" />
+    <Folder Include="Concrete\" />
+    <Folder Include="ValidationRules\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.0.3" />
+  </ItemGroup>
+</Project>

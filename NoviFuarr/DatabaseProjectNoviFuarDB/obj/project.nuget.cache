@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "PwN/VaT9qHhsinixZETx9tXvLoCqwWmHZrzGg+XwTMyrBajg5nSPr3oBD9sK4OfpvIu9WV+7HyWuZ7EDoHagFA==",
+  "success": true,
+  "projectFilePath": "/Users/macbookpro/Projects/NoviFuar/DatabaseProjectNoviFuarDB/DatabaseProjectNoviFuarDB.sqlproj",
+  "expectedPackageFiles": [
+    "/Users/macbookpro/.nuget/packages/microsoft.netframework.referenceassemblies/1.0.0/microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "/Users/macbookpro/.nuget/packages/microsoft.netframework.referenceassemblies.net46/1.0.0/microsoft.netframework.referenceassemblies.net46.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

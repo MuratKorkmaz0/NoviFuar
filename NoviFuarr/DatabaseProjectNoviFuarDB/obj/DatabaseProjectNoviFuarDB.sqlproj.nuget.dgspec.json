@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/macbookpro/Projects/NoviFuar/DatabaseProjectNoviFuarDB/DatabaseProjectNoviFuarDB.sqlproj": {}
+  },
+  "projects": {
+    "/Users/macbookpro/Projects/NoviFuar/DatabaseProjectNoviFuarDB/DatabaseProjectNoviFuarDB.sqlproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/macbookpro/Projects/NoviFuar/DatabaseProjectNoviFuarDB/DatabaseProjectNoviFuarDB.sqlproj",
+        "projectName": "DatabaseProjectNoviFuarDB",
+        "projectPath": "/Users/macbookpro/Projects/NoviFuar/DatabaseProjectNoviFuarDB/DatabaseProjectNoviFuarDB.sqlproj",
+        "packagesPath": "/Users/macbookpro/.nuget/packages/",
+        "outputPath": "/Users/macbookpro/Projects/NoviFuar/DatabaseProjectNoviFuarDB/obj/",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "/Users/macbookpro/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net46"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net46": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net46": {
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}

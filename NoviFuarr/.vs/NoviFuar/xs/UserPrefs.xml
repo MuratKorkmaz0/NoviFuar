@@ -1,0 +1,45 @@
+﻿<Properties StartupConfiguration="{5CE6EDC0-5FCD-476A-8E36-30C406153594}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.NoviFuar PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="NoviFuar/Program.cs">
+    <Files>
+      <File FileName="NoviFuar/Controllers/HomeController.cs" Line="15" Column="28" />
+      <File FileName="EntityLayer/Concrete/Visitors.cs" Line="13" Column="20" />
+      <File FileName="NoviFuar/Views/Home/VisitorProcedures.cshtml" Line="27" Column="19" />
+      <File FileName="NoviFuar/Views/Home/Visitors.cshtml" Line="74" Column="27" />
+      <File FileName="EntityLayer/Concrete/PersonalManagement.cs" Line="20" Column="26" />
+      <File FileName="NoviFuar/Views/Home/Personals.cshtml" Line="1" Column="1" />
+      <File FileName="NoviFuar/Views/Home/PersonalProcedures.cshtml" Line="17" Column="18" />
+      <File FileName="NoviFuar/Program.cs" Line="9" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="NoviFuar" expanded="True">
+            <Node name="EntityLayer" expanded="True" />
+            <Node name="NoviFuar" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="ProjectDependencies" expanded="True" />
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+              </Node>
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <Debugger.DebugSourceFolders />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>

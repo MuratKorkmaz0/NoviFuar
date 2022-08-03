@@ -1,0 +1,38 @@
+﻿@using EntityLayer.Concrete
+@model List<PersonalManagement>
+<!--Personal Management Page-->
+@using (@Html.BeginForm("Index", "Personals", FormMethod.Get))
+    {
+    <div class="card">
+        <div class="card-header">Personeller</div>
+        <table class="table">
+            <thead class="thead-blue">
+                <tr>
+                    <th> No</th>
+                    <th> Ad </th>
+                    <th> Soyad</th>
+                    <th> Rol</th>
+                    <th> Olusturma Tarihi</th>
+                    <th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @foreach (var item in Model)
+
+                    {
+                    <tr>
+                        <td>@item.PersonalID</td>
+                        <td>@item.PersonalName</td>
+                        <td>@item.PersonalSurname</td>
+                        <td>@item.PersonalUserName</td>
+                        <td>@item.PersonalPassword</td>
+                        <td>@item.PersonalRoles</td>
+                        <td><a href="#" class="btn btn-danger">Sil</a></td>
+                    </tr>
+                    }
+            </tbody>
+        </table>
+    </div>
+    }

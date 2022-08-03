@@ -1,0 +1,9 @@
+/Users/macbookpro/Projects/NoviFuar/DatabaseProjectNoviFuarDB/bin/Debug/DatabaseProjectNoviFuarDB.dacpac
+/Users/macbookpro/Projects/NoviFuar/DatabaseProjectNoviFuarDB/bin/Debug/DatabaseProjectNoviFuarDB.dll
+/Users/macbookpro/Projects/NoviFuar/DatabaseProjectNoviFuarDB/bin/Debug/DatabaseProjectNoviFuarDB.pdb
+/Users/macbookpro/Projects/NoviFuar/DatabaseProjectNoviFuarDB/obj/Debug/Model.xml
+/Users/macbookpro/Projects/NoviFuar/DatabaseProjectNoviFuarDB/obj/Debug/refactor.xml
+/Users/macbookpro/Projects/NoviFuar/DatabaseProjectNoviFuarDB/obj/Debug/postdeploy.sql
+/Users/macbookpro/Projects/NoviFuar/DatabaseProjectNoviFuarDB/obj/Debug/predeploy.sql
+/Users/macbookpro/Projects/NoviFuar/DatabaseProjectNoviFuarDB/obj/Debug/DatabaseProjectNoviFuarDB.dll
+/Users/macbookpro/Projects/NoviFuar/DatabaseProjectNoviFuarDB/obj/Debug/DatabaseProjectNoviFuarDB.pdb

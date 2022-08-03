@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build">
+  <Sdk Name="Microsoft.Build.Sql" Version="0.1.1-alpha" />
+  <PropertyGroup>
+    <Name>DatabaseProjectNoviFuarDB</Name>
+    <ProjectGuid>{97AF1BBA-6906-4001-A851-72F3B603A55F}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
+    <ModelCollation>1033, CI</ModelCollation>
+  </PropertyGroup>
+  <Target Name="BeforeBuild">
+    <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
+  </Target>
+  <ItemGroup>
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Tables\" />
+  </ItemGroup>
+</Project>
